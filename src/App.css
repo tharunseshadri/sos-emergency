@@ -1,38 +1,239 @@
-.App {
+/* General styling */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  background-color: #f0f4f8; /* Light background */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Full-screen container */
+.app-container {
+  min-height: 100vh;
+  background-color: #f0f4f8;
+}
+
+/* Main content area */
+.main-content {
+  margin-top: 60px; /* Height of navbar */
+  min-height: calc(100vh - 60px);
+  padding: 1rem;
+}
+
+/* Responsive padding */
+@media (min-width: 768px) {
+  .main-content {
+    padding: 2rem;
+  }
+}
+
+/* Container for components */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* General utility classes */
+.page-container {
+  padding-top: 60px; /* Height of navbar */
+}
+
+.section-container {
+  margin-bottom: 2rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Centering form and content */
+.centered-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  max-width: 90%;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Buttons */
+button {
+  background-color: #ff4747;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff1c1c;
+  transform: scale(1.05);
+}
+
+/* SOS Button */
+button.sos {
+  background-color: #ff4747;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(255, 71, 71, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+button.sos:hover {
+  background-color: #cc0000;
+  transform: scale(1.1);
+}
+
+/* Inputs and Forms */
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Link styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Card-like sections */
+.section-card {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.section-card:hover {
+  transform: scale(1.05);
+}
+
+/* Specific styling for SOSButton component */
+.sos-button-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sos-button-container:hover {
+  transform: scale(1.05);
+}
+
+.sos-button-container h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* User Info Page */
+.user-info-container {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.user-info-card {
+  background: white;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-info-card p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* Particles.js Background */
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .centered-content {
+    padding: 20px;
   }
+
+  .sos-button-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .user-info-container {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+.sos-page {
+  text-align: center;
+  padding: 2rem;
 }

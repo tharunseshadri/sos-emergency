@@ -1,0 +1,44 @@
+/* SOSButton.css */
+.sos-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .sos-btn {
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .sos-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ambulance-btn {
+    background-color: #28a745; /* Green for Ambulance */
+  }
+  
+  .fire-btn {
+    background-color: #fd7e14; /* Orange for Fire Station */
+  }
+  
+  .nearby-locations ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nearby-locations li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  

@@ -1,0 +1,139 @@
+.payment-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.payment-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-card h2 {
+  color: #2d3748;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.amount-section {
+  margin-bottom: 30px;
+}
+
+.amount-section label {
+  display: block;
+  color: #4a5568;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.amount-input {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background: #f7fafc;
+}
+
+.currency {
+  color: #4a5568;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.amount-input input {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  width: 100%;
+  color: #2d3748;
+  outline: none;
+}
+
+.payment-details {
+  background: #f7fafc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: #4a5568;
+}
+
+.detail-row.total {
+  border-top: 1px solid #e2e8f0;
+  margin-top: 10px;
+  padding-top: 15px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(145deg, #ff3366, #ff0033);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.pay-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 51, 102, 0.3);
+}
+
+.button-text {
+  margin-left: 15px;
+}
+
+.button-amount {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.secure-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.secure-icon {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .payment-container {
+    padding: 10px;
+  }
+
+  .payment-card {
+    padding: 20px;
+  }
+
+  .payment-card h2 {
+    font-size: 20px;
+  }
+
+  .amount-input input {
+    font-size: 18px;
+  }
+} 

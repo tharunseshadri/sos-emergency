@@ -1,0 +1,176 @@
+/* LocationTracker.css */
+
+.location-tracker {
+    text-align: center;
+    margin: 20px;
+    position: relative;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .leaflet-container {
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stop-tracking-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .stop-tracking-btn:hover {
+    background-color: darkred;
+  }
+  
+  .location-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .location-button i {
+    color: #4CAF50;
+    font-size: 18px;
+  }
+  
+  .location-button span {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .location-active-indicator {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  .location-popup {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  .location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .location-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .close-map {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 18px;
+    transition: all 0.2s ease;
+  }
+  
+  .close-map:hover {
+    color: #333;
+    transform: rotate(90deg);
+  }
+  
+  .map-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .location-coordinates {
+    padding: 16px;
+    background: #f8f8f8;
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .location-coordinates p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+    font-family: monospace;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .location-popup {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+      animation: slideUp 0.3s ease-out;
+    }
+    
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+  }
+  

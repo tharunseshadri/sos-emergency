@@ -1,0 +1,38 @@
+.aadhar-container {
+    background: #fde2e4;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #d90429;
+  }
+  
+  .send-otp-btn, .verify-otp-btn {
+    background-color: #d90429;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .send-otp-btn:hover, .verify-otp-btn:hover {
+    background-color: #b50220;
+  }
+  
+  .back-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  

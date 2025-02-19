@@ -1,0 +1,135 @@
+.emergency-contacts-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.emergency-contacts-page h1 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.emergency-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.category-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.category-section h2 {
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #edf2f7;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.contact-info h3 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.phone-number {
+  color: #4a5568;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.call-button {
+  background: #6719b4;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.call-button:hover {
+  background: #5614a0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(103, 25, 180, 0.2);
+}
+
+.call-icon {
+  font-size: 1.2rem;
+}
+
+/* Category-specific styling */
+.category-section:nth-child(1) .contact-card {
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+}
+
+.category-section:nth-child(2) .contact-card {
+  background: linear-gradient(135deg, #f0fff4 0%, #fff 100%);
+}
+
+.category-section:nth-child(3) .contact-card {
+  background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emergency-contacts-page {
+    padding: 1rem;
+  }
+
+  .category-section {
+    padding: 1.5rem;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 1.2rem;
+  }
+} 
